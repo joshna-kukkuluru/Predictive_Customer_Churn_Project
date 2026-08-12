@@ -10,6 +10,16 @@ The final model is implemented using **XGBoost** and deployed as an interactive 
 
 ---
 
+## 🌐 Live Demo
+
+🚀 **Try the deployed application:**
+
+https://predictivecustomerchurnproject-kqwwvztcmnrzjfmndrc6nd.streamlit.app/
+
+> The application allows users to enter customer information and receive a churn prediction, probability score, risk level, and customer summary.
+
+---
+
 ## 🎯 Objectives
 
 - Predict whether a customer is likely to churn.
@@ -37,9 +47,27 @@ The final model is implemented using **XGBoost** and deployed as an interactive 
 
 ---
 
+## 📊 Dataset
+
+The project uses the **Telco Customer Churn dataset**.
+
+The dataset contains customer information related to:
+
+- Demographics
+- Customer tenure
+- Phone and internet services
+- Online services
+- Contract information
+- Payment methods
+- Monthly charges
+- Total charges
+- Customer churn status
+
+---
+
 ## 🤖 Machine Learning Models
 
-The project compares the following models:
+The project compares the following machine learning models:
 
 1. Logistic Regression
 2. Random Forest
@@ -49,7 +77,7 @@ After model evaluation and tuning, **XGBoost** was selected as the final model.
 
 ---
 
-## 📊 Model Performance
+## 📈 Model Performance
 
 The final tuned XGBoost model achieved:
 
@@ -61,13 +89,13 @@ The final tuned XGBoost model achieved:
 | F1 Score | 0.5852 |
 | AUC-ROC | 0.8456 |
 
-The ROC-AUC comparison showed that XGBoost achieved the highest AUC among the evaluated models.
+The ROC-AUC comparison showed that **XGBoost achieved the highest AUC among the evaluated models**.
 
 ---
 
 ## 🔍 Model Explainability
 
-SHAP (SHapley Additive exPlanations) was used to understand how different features influence the XGBoost predictions.
+**SHAP (SHapley Additive exPlanations)** was used to understand how different features influence the XGBoost predictions.
 
 The SHAP analysis helps identify important factors affecting customer churn, including features related to:
 
@@ -108,12 +136,42 @@ Users can enter customer information such as:
 - Monthly Charges
 - Total Charges
 
-The application then provides:
+The application provides:
 
-- Churn prediction
-- Churn probability
-- Risk level
-- Customer summary
+- 🔮 Churn prediction
+- 📊 Churn probability
+- ⚠️ Risk level
+- 👤 Customer summary
+
+The application was tested with both low-risk and high-risk customer scenarios.
+
+### Example Results
+
+**Low-risk customer:**
+- Prediction: Customer is likely to STAY
+- Churn Probability: 20.79%
+- Risk Level: Low Risk
+
+**High-risk customer:**
+- Prediction: Customer is likely to CHURN
+- Churn Probability: 81.56%
+- Risk Level: High Risk
+
+---
+
+## 📸 Screenshots
+
+### Customer Information
+
+![Customer Information](screenshots/01_customer_information.png)
+
+### Services and Billing
+
+![Services and Billing](screenshots/02_services_billing.png)
+
+### Churn Prediction
+
+![Churn Prediction](screenshots/03_churn_prediction.png)
 
 ---
 
@@ -133,14 +191,13 @@ Predictive_Customer_Churn_Project/
 ├── notebooks/
 │   └── customer_churn_eda.ipynb
 │
-├── reports/
-│
 ├── screenshots/
+│   ├── 01_customer_information.png
+│   ├── 02_services_billing.png
+│   └── 03_churn_prediction.png
 │
 ├── streamlit_app/
 │   └── app.py
-│
-├── tests/
 │
 ├── .gitignore
 ├── README.md
